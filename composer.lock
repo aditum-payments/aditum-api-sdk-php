@@ -90,7 +90,7 @@
                 "shasum": ""
             },
             "require": {
-                "php": "^7.1 || ^8.0"
+                "php": "^7.1 || ^8.0 || ^8.1"
             },
             "replace": {
                 "myclabs/deep-copy": "self.version"
