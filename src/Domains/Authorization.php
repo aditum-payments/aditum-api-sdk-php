@@ -64,7 +64,7 @@ class Authorization extends Charge {
                         "installmentType" => $this->transactions->getInstallmentType()
                     ),
                 ],
-                "source" => 1,
+                "source" => $this->getOperationSource(),
                 "capture" => false,
                 "sessionId" => self::getSessionId(),
                 "merchantChargeId" => self::getMerchantChargeId()

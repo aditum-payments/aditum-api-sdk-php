@@ -1,5 +1,6 @@
 <?php
 namespace AditumPayments\ApiSDK\Domains;
+use AditumPayments\ApiSDK\Enum\OperationSource;
 
 abstract class Charge {
     public const CHARGE_TYPE = "Undefined";
@@ -10,6 +11,8 @@ abstract class Charge {
 
     private $merchantChargeId = "";
     private $sessionId = "";
+
+    private $operationSource = OperationSource::Gateway;
 
     public function setMerchantChargeId($merchantChargeId) {
         $this->merchantChargeId = $merchantChargeId;
@@ -29,4 +32,20 @@ abstract class Charge {
 
     abstract public function toString();
     abstract public function toJson();
+
+	/**
+	 * @return OperationSource 
+	 */
+	public function getOperationSource() {
+		return $this->operationSource;
+	}
+	
+	/**
+	 * @param OperationSource $operationSource 
+	 * @return self
+	 */
+	public function setOperationSource($operationSource): self {
+		$this->operationSource = $operationSource;
+		return $this;
+	}
 }

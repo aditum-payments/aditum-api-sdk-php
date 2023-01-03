@@ -58,7 +58,7 @@ class Pix extends Charge {
                         "amount" => $this->transactions->getAmount()
                     ),
                 ],
-                "source" => 1,
+                "source" => $this->getOperationSource(),
                 "merchantChargeId" => self::getMerchantChargeId()
             ),
         );
