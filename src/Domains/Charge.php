@@ -44,7 +44,7 @@ abstract class Charge {
 	 * @param OperationSource $operationSource 
 	 * @return self
 	 */
-	public function setOperationSource($operationSource): self {
+	public function setOperationSource(OperationSource $operationSource): self {
 		$this->operationSource = $operationSource;
 		return $this;
 	}
