@@ -41,10 +41,10 @@ abstract class Charge {
 	}
 	
 	/**
-	 * @param OperationSource $operationSource 
+	 * @param int $operationSource from AditumPayments\ApiSDK\Enum\OperationSource
 	 * @return self
 	 */
-	public function setOperationSource(OperationSource $operationSource): self {
+	public function setOperationSource(int $operationSource): self {
 		$this->operationSource = $operationSource;
 		return $this;
 	}
