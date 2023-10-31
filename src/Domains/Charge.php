@@ -10,6 +10,7 @@ abstract class Charge {
 
     private $merchantChargeId = "";
     private $sessionId = "";
+    private $source = 1;
 
     public function setMerchantChargeId($merchantChargeId) {
         $this->merchantChargeId = $merchantChargeId;
@@ -25,6 +26,14 @@ abstract class Charge {
 
     public function getSessionId() {
         return $this->sessionId;
+    }
+
+    public function setSource($source) {
+        return $this->$source;
+    }
+
+    public function getSource() {
+        return $this->source;
     }
 
     abstract public function toString();
