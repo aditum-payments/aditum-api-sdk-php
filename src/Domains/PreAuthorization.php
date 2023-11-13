@@ -66,7 +66,7 @@ class PreAuthorization extends Charge {
                         "installmentType" => $this->transactions->getInstallmentType()
                     ),
                 ],
-                "source" => 1,
+                "source" => self::getSource(),
                 "capture" => false,
                 "sessionId" => $this->getSessionId(),
                 "merchantChargeId" => self::getMerchantChargeId()

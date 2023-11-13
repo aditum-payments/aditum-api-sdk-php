@@ -61,7 +61,7 @@ class Boleto extends Charge {
                         "discount" => $this->transactions->discount->toString()
                     ),
                 ],
-                "source" => 1,
+                "source" => self::getSource(),
                 "deadline" => $this->getDeadline(),
                 "sessionId" => $this->getSessionId(),
                 "merchantChargeId" => self::getMerchantChargeId()
